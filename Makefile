@@ -48,7 +48,7 @@ CHIP = MK20DX256
 #  Select the toolchain by providing a path to the top level
 #  directory; this will be the folder that holds the
 #  arm-none-eabi subfolders. On linux, this should be /usr or /usr/local.
-TOOLPATH = /usr
+TOOLPATH = /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/
 
 #  Holds the base path to the teensyduino installation. We point specifically
 #  to the teensy3 path since we are only compiling for the teensy 3.0 or
@@ -56,7 +56,7 @@ TOOLPATH = /usr
 #  in order to initialize the chip. We could write our own and that could be
 #  fun, but this makefile will use the ones that come with Teensyduino for
 #  efficiency's sake.
-TEENSY3X_BASEPATH = $(HOME)/arduino-1.0.5/hardware/teensy/cores/teensy3
+TEENSY3X_BASEPATH = /Applications/Arduino.app//Contents/Resources/Java/hardware/teensy/avr/cores/teensy3/
 
 #
 #  Select the target type.  This is typically arm-none-eabi.
@@ -94,7 +94,7 @@ INCDIRS += -I.
 LSCRIPT = $(TEENSY3X_BASEPATH)/mk20dx256.ld
 
 
-OPTIMIZATION = 0
+OPTIMIZATION =  s
 DEBUG = -g
 
 #  List the directories to be searched for libraries during linking.
